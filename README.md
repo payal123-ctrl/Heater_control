@@ -15,5 +15,15 @@ This project is a temperature-controlled heater system that uses an LM35 analog 
 
 Component	        Description
 <br>
-Arduino Uno	      Main microcontroller that reads temperature via ADC and controls the relay
+Arduino Uno	 -->     Main microcontroller that reads temperature via ADC and controls the relay
+<br>
+LM35	        --> Analog temperature sensor (10 mV/°C output)
+<br>
+Relay Module	--> Electrically isolates and controls high-voltage heater switching
+<br>
+Heater	      --> Any resistive heating element powered via relay
+<br>
+LEDs	        --> Visual indicators for heater status and overheat alert
+<br>
+Power Supply	 -> 5V DC for Arduino, LM35, and Relay module (external supply for heater if needed)
 
