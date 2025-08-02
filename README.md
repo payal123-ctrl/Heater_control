@@ -30,7 +30,7 @@ Power Supply	 -> 5V DC for Arduino, LM35, and Relay module (external supply for 
 
 Features:
 <br>
- Real-Time Temperature Monitoring using LM35 sensor
+ 🔍 Real-Time Temperature Monitoring using LM35 sensor
 <br>
 🔄 Automatic Heater ON/OFF control based on temperature setpoint and hysteresis
 <br>
@@ -41,4 +41,26 @@ Features:
 📶 Analog-to-Digital Conversion using Arduino’s 10-bit ADC (0–1023 range)
 <br>
 🛠️ Modular Design for easy integration and testing in simulation (Wokwi or Proteus)
+<br>
+
+Working Principle:
+<br>
+LM35 provides a temperature-dependent analog voltage to Arduino (10 mV/°C).
+<br>
+Arduino Uno reads this analog voltage via ADC (Analog to Digital Converter).
+<br>
+Temperature is calculated in Celsius.
+<br>
+1) If temperature < target:
+<br>
+   * Relay is activated → Heater turns ON
+    <br>
+   * Heater LED is ON
+
+2) If temperature > target + hysteresis:
+
+   * Relay is deactivated → Heater turns OFF
+    <br>
+   * If overheat threshold is crossed, overheat LED or buzzer is triggered.
+     
 
