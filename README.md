@@ -26,4 +26,19 @@ Heater	      --> Any resistive heating element powered via relay
 LEDs	        --> Visual indicators for heater status and overheat alert
 <br>
 Power Supply	 -> 5V DC for Arduino, LM35, and Relay module (external supply for heater if needed)
+<br>
+
+Features:
+<br>
+ Real-Time Temperature Monitoring using LM35 sensor
+<br>
+🔄 Automatic Heater ON/OFF control based on temperature setpoint and hysteresis
+<br>
+🚨 Overheat Protection with status LED or buzzer
+<br>
+🔌 Relay Switching to control external heater circuit safely
+<br>
+📶 Analog-to-Digital Conversion using Arduino’s 10-bit ADC (0–1023 range)
+<br>
+🛠️ Modular Design for easy integration and testing in simulation (Wokwi or Proteus)
 
