@@ -61,11 +61,10 @@ Temperature is calculated in Celsius.
    <br>
    
    * Temperature Control Logic:
-   <br>
-   if (temperature < targetTemp) {
+   <br>if (temperature < targetTemp) {
     <br>digitalWrite(relayPin, HIGH); // Turn ON heater
     <br>digitalWrite(heaterLED, HIGH);
- <br>} else if (temperature >= targetTemp + hysteresis) {
+   <br>} else if (temperature >= targetTemp + hysteresis) {
     <br>digitalWrite(relayPin, LOW);  // Turn OFF heater
     <br>digitalWrite(heaterLED, LOW);
  <br>
