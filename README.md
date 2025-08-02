@@ -67,7 +67,7 @@ Temperature is calculated in Celsius.
    <br>} else if (temperature >= targetTemp + hysteresis) {
     <br>digitalWrite(relayPin, LOW);  // Turn OFF heater
     <br>digitalWrite(heaterLED, LOW);
- <br>
+ <br>}
 
  * Simulation:
    <br>
@@ -75,6 +75,22 @@ Temperature is calculated in Celsius.
  <br>>LM35 temperature can be adjusted in simulation
  <br>>LED and relay behavior are shown visually
  <br>>Can be extended to support BLE, display, or mobile app alerts
+> <br>
+
+ * Block Diagram:
+  <br>
 
      
++----------------+      +----------------+      +----------------+      +------------
+|  Power Supply  | ---> |  LM35 Sensor   | ---> |  Arduino Uno   | ---> |  Relay     |
+|     (5V)       |      |  (Analog Temp) |      |  (10-bit ADC)  |      |  Module    |
++----------------+      +----------------+      +----------------+      +------------+
+                                                              |                 |
+                                                              |                 v
+                                                              |           +------------+
+                                                              |           |   Heater   |
+                                                              |           +------------+
+                                                              |
+                                                              +---> LED (Heater ON/OFF)
+                                                              +---> LED/Buzzer (Overheat Alert)
 
