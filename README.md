@@ -52,15 +52,22 @@ Arduino Uno reads this analog voltage via ADC (Analog to Digital Converter).
 Temperature is calculated in Celsius.
 <br>
 1) If temperature < target:
-<br>
-   * Relay is activated → Heater turns ON
-    <br>
-   * Heater LED is ON
+<br> * Relay is activated → Heater turns ON
+    <br>* Heater LED is ON
 
 2) If temperature > target + hysteresis:
-
-   * Relay is deactivated → Heater turns OFF
-    <br>
-   * If overheat threshold is crossed, overheat LED or buzzer is triggered.
+<br> * Relay is deactivated → Heater turns OFF
+    <br> * If overheat threshold is crossed, overheat LED or buzzer is triggered.
+   <br>
+   
+   Temperature Control Logic:
+   <br>
+   if (temperature < targetTemp) {
+   <br>digitalWrite(relayPin, HIGH); // Turn ON heater
+    <br>digitalWrite(heaterLED, HIGH);
+<br>} else if (temperature >= targetTemp + hysteresis) {
+    <br>digitalWrite(relayPin, LOW);  // Turn OFF heater
+    <br>digitalWrite(heaterLED, LOW);
+<br>}
      
 
