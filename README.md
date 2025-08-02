@@ -82,8 +82,8 @@ Temperature is calculated in Celsius.
 
      
 +----------------+      +----------------+      +----------------+      +------------
-|  Power Supply  | ---> |  LM35 Sensor   | ---> |  Arduino Uno   | ---> |  Relay     |
-|     (5V)       |      |  (Analog Temp) |      |  (10-bit ADC)  |      |  Module    |
+|  Power Supply| ---> |  LM35 Sensor   | ---> |  Arduino Uno   | ---> |  Relay     |
+|    <br>(5V)       |  <br>(Analog Temp) <br>(10-bit ADC)  |      |     <br>Module    |
 +----------------+      +----------------+      +----------------+      +------------+
                                                               |                 |<br>
                                                               |                 v
