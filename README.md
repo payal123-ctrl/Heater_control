@@ -85,12 +85,12 @@ Temperature is calculated in Celsius.
 |  Power Supply  | ---> |  LM35 Sensor   | ---> |  Arduino Uno   | ---> |  Relay     |
 |     (5V)       |      |  (Analog Temp) |      |  (10-bit ADC)  |      |  Module    |
 +----------------+      +----------------+      +----------------+      +------------+
-                                                              |                 |
+                                                              |                 |<br>
                                                               |                 v
                                                               |           +------------+
                                                               |           |   Heater   |
                                                               |           +------------+
-                                                              |
+                                                              |<br>
                                                               +---> LED (Heater ON/OFF)
-                                                              +---> LED/Buzzer (Overheat Alert)
+                                                              <br>+---> LED/Buzzer (Overheat Alert)
 
