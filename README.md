@@ -43,7 +43,7 @@ Features:
 🛠️ Modular Design for easy integration and testing in simulation (Wokwi or Proteus)
 <br>
 
-Working Principle:
+* Working Principle:
 <br>
 LM35 provides a temperature-dependent analog voltage to Arduino (10 mV/°C).
 <br>
@@ -60,14 +60,22 @@ Temperature is calculated in Celsius.
     <br> * If overheat threshold is crossed, overheat LED or buzzer is triggered.
    <br>
    
-   Temperature Control Logic:
+   * Temperature Control Logic:
    <br>
    if (temperature < targetTemp) {
-   <br>digitalWrite(relayPin, HIGH); // Turn ON heater
+    <br>digitalWrite(relayPin, HIGH); // Turn ON heater
     <br>digitalWrite(heaterLED, HIGH);
-<br>} else if (temperature >= targetTemp + hysteresis) {
+ <br>} else if (temperature >= targetTemp + hysteresis) {
     <br>digitalWrite(relayPin, LOW);  // Turn OFF heater
     <br>digitalWrite(heaterLED, LOW);
-<br>}
+ <br>
+
+ * Simulation:
+   <br>
+  > Simulated using Wokwi platform
+ <br>>LM35 temperature can be adjusted in simulation
+ <br>>LED and relay behavior are shown visually
+ <br>>Can be extended to support BLE, display, or mobile app alerts
+
      
 
