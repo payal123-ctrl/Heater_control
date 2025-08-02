@@ -77,20 +77,5 @@ Temperature is calculated in Celsius.
  <br>>Can be extended to support BLE, display, or mobile app alerts
 > <br>
 
- * Block Diagram:
-  <br>
 
-     
-+----------------+      +----------------+      +----------------+      +------------
-|  Power Supply| ---> |  LM35 Sensor   | ---> |  Arduino Uno   | ---> |  Relay     |
-|    <br>(5V)       |  <br>(Analog Temp) <br>(10-bit ADC)  |      |     <br>Module    |
-+----------------+      +----------------+      +----------------+      +------------+
-                                                              |                 |<br>
-                                                              |                 v
-                                                              |           +------------+
-                                                              |           |   Heater   |
-                                                              |           +------------+
-                                                              |<br>
-                                                              +---> LED (Heater ON/OFF)
-                                                              <br>+---> LED/Buzzer (Overheat Alert)
 
